@@ -1,0 +1,106 @@
+@import "./header.scss";
+@import "./hero.scss";
+@import "./menu.scss";
+@import "./why.scss";
+@import "./latestArticles.scss";
+@import "./footer.scss";
+
+:root {
+  --DarkBlue: hsl(233, 26%, 24%);
+  --LimeGreen: hsl(136, 65%, 51%);
+  --BrightCyan: hsl(192, 70%, 51%);
+  --GrayishBlue: hsl(233, 8%, 62%);
+  --LightGrayishBlue: hsl(220, 16%, 96%);
+  --VeryLightGray: hsl(0, 0%, 98%);
+  --White: hsl(0, 0%, 100%);
+  font-size: 18px;
+}
+
+body {
+  font-family: "Public Sans", sans-serif;
+  margin: 0;
+  color: var(--GrayishBlue);
+}
+
+.wrapper {
+  padding: 0 1.2em;
+}
+
+.title {
+  // border: 1px solid green;
+  &__h1 {
+    // border: 1px solid green;
+    color: var(--DarkBlue);
+    font-weight: 300;
+    line-height: 1.2;
+    font-size: 2.2em;
+    margin: 0;
+  }
+  &__h2 {
+    @extend .title__h1;
+    font-size: 1.8em;
+  }
+  &__h3 {
+    @extend .title__h1;
+    font-size: 1.1em;
+  }
+  &__h4 {
+    @extend .title__h1;
+    font-size: 0.95em;
+  }
+}
+
+.copy {
+  // border: 1px solid blue;
+  line-height: 1.7;
+  font-size: 0.8em;
+}
+
+.button {
+  // border: 2px solid green;
+  border: none;
+  padding: 1em 2.4em;
+  font-size: 0.8em;
+  border-radius: 1.5em;
+  color: var(--White);
+  background-image: linear-gradient(
+    to right,
+    var(--LimeGreen) 0%,
+    var(--BrightCyan) 100%
+  );
+}
+
+@mixin icon {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  background-repeat: no-repeat;
+}
+
+.icon {
+  &__facebook {
+    @include icon;
+    background-image: url("../../static/images/icon-facebook.svg");
+  }
+  &__youtube {
+    @include icon;
+    background-image: url("../../static/images/icon-youtube.svg");
+  }
+  &__twitter {
+    @include icon;
+    background-image: url("../../static/images/icon-twitter.svg");
+  }
+  &__pinterest {
+    @include icon;
+    background-image: url("../../static/images/icon-pinterest.svg");
+  }
+  &__instagram {
+    @include icon;
+    background-image: url("../../static/images/icon-instagram.svg");
+  }
+}
+
+.is-hidden {
+  // display: show;
+  display: none;
+}

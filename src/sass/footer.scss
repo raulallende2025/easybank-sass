@@ -1,0 +1,28 @@
+.footer {
+  border: 1px solid red;
+  background: var(--DarkBlue);
+  padding: 2em 0;
+  text-align: center;
+  svg {
+    display: block;
+    margin: auto;
+    margin-bottom: 2em;
+  }
+  a {
+    display: block;
+    color: var(--LightGrayishBlue);
+    text-decoration: none;
+    margin-bottom: 1.5em;
+    font-size: 0.8em;
+  }
+  &__social {
+    display: grid;
+    grid-template-columns: repeat(5, 25px);
+    column-gap: 0.5em;
+    justify-content: center;
+    margin: 0;
+  }
+  .button {
+    margin: 1.5em 0 1em;
+  }
+}

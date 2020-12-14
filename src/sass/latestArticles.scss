@@ -1,0 +1,35 @@
+.latestArticles {
+  background: var(--VeryLightGray);
+  text-align: center;
+  padding: 5em 0;
+  &__grid {
+    display: grid;
+    row-gap: 1.5em;
+    margin-top: 2em;
+  }
+  &__item {
+    // border: 1px solid red;
+    border-radius: 0.5em;
+    overflow: hidden;
+    background: var(--White);
+    text-align: start;
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+    .content {
+      // border: 1px solid blue;
+      padding: 1.2em 1.2em 2em;
+      small {
+        font-size: 0.55em;
+        margin-bottom: 1.5em;
+        display: inline-block;
+      }
+      .copy {
+        line-height: 1.5;
+        font-size: 0.76em;
+        // border: 1px solid red;
+      }
+    }
+  }
+}
