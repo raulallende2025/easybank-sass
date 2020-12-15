@@ -1,3 +1,10 @@
+@mixin media {
+  &__grid {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1.5em;
+  }
+}
+
 .latestArticles {
   background: var(--VeryLightGray);
   text-align: center;
@@ -30,6 +37,45 @@
         font-size: 0.76em;
         // border: 1px solid red;
       }
+    }
+  }
+  @media screen and (min-width: 768px) {
+    @include media;
+  }
+  @media screen and (min-width: 1100px) {
+    @include media;
+    padding-left: 1em;
+    padding-right: 1em;
+    &__grid {
+      column-gap: 2.5em;
+      row-gap: 2.5em;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    @include media;
+    padding-left: 2em;
+    padding-right: 2em;
+    &__grid {
+      column-gap: 3em;
+      row-gap: 3em;
+    }
+  }
+  @media screen and (min-width: 1300px) {
+    @include media;
+    padding-left: 3em;
+    padding-right: 3em;
+    &__grid {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      column-gap: 1em;
+    }
+  }
+  @media screen and (min-width: 1400px) {
+    @include media;
+    padding-left: 4em;
+    padding-right: 4em;
+    &__grid {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      column-gap: 1em;
     }
   }
 }
