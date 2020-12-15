@@ -1,4 +1,5 @@
 @mixin media {
+  text-align: start;
   &__grid {
     grid-template-columns: 1fr 1fr;
     column-gap: 1.5em;
